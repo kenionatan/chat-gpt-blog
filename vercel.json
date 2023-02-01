@@ -63,7 +63,8 @@
     "scripts": {
         "vercel": [
             "@php -v",
-            "npm -v"
+            "composer install -vvv",
+            "php artisan blog:install"
         ]
     }
 }
