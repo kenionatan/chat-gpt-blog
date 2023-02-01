@@ -4,6 +4,15 @@
         { "src": "/api/index.php", "use": "vercel-php@0.5.2" },
         { "src": "/public/**", "use": "@vercel/static" }
     ],
+    "functions": {
+        "api/*.php": {
+          "runtime": "vercel-php@0.5.2"
+        }
+    },
+    "require": {
+        "php": "^8.1",
+        "tracy/tracy": "^2.0"
+    },
     "routes": [
         {
             "src": "/(css|js)/(.*)",
