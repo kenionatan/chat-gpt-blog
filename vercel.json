@@ -1,36 +1,9 @@
 {
     "version": 2,
-    /*"builds": [
-        { "src": "/api/index.php", "use": "vercel-php@0.5.2" },
-        { "src": "/public/**", "use": "@vercel/static" }
-    ],*/
     "functions": {
-        "api/*.php": {
-          "runtime": "vercel-php@0.5.2"
+        "api/index.php": {
+          "runtime": "vercel-php@0.3.2"
         }
-    },
-    "require": {
-        "php": "^7.2.5",
-        "dflydev/apache-mime-types": "^1.0",
-        "erusev/parsedown": "^1.7",
-        "fideloper/proxy": "^4.2",
-        "fruitcake/laravel-cors": "^1.0",
-        "guzzlehttp/guzzle": "^6.3",
-        "intervention/image": "^2.4",
-        "jcc/laravel-vote": "~2.0",
-        "jellybool/flysystem-upyun": "dev-master",
-        "jellybool/translug": "~2.0",
-        "laravel/framework": "^7.0",
-        "laravel/passport": "^9.3.2",
-        "laravel/socialite": "^4.3",
-        "laravel/tinker": "^2.0",
-        "laravel/ui": "^2.0",
-        "league/fractal": "^0.17",
-        "league/html-to-markdown": "^4.8",
-        "predis/predis": "^1.1",
-        "spatie/laravel-permission": "^3.12",
-        "tucker-eric/eloquentfilter": "^2.3",
-        "yzalis/identicon": "^1.2"
     },
     "routes": [
         {
@@ -45,7 +18,7 @@
     "env": {
         "APP_NAME": "Vercel Laravel",
         "APP_ENV": "production",
-        "APP_DEBUG": "false",
+        "APP_DEBUG": "true",
         "APP_URL": "https://chat-gpt-blog.vercel.app/",
         "VERCEL_DEMO_MODE": "true",
         "APP_CONFIG_CACHE": "/tmp/config.php",
@@ -59,12 +32,5 @@
         "VIEW_COMPILED_PATH": "/tmp/views",
         "SSR_TEMP_PATH": "/tmp/ssr",
         "NODE_PATH": "node"
-    },
-    "scripts": {
-        "vercel": [
-            "@php -v",
-            "composer install -vvv",
-            "php artisan blog:install"
-        ]
     }
 }
